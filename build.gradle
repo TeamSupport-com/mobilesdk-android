@@ -22,16 +22,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            credentials {
-                username = ""
-                password = ""
-            }
-            url ""
-            authentication {
-                basic(BasicAuthentication)
-            }
-        }
+        maven()
     }
 }
 
