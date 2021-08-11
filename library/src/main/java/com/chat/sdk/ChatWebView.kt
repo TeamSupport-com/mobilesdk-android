@@ -99,11 +99,12 @@ internal class ChatWebView(context: Context) : WebView(context), Chat {
     private fun setup() {
         CookieManager.getInstance().setAcceptCookie(true)
         CookieManager.getInstance().setAcceptThirdPartyCookies(this, true)
+        val pInfo = context.packageManager.getPackageInfo(context.packageName, 0)
         with(settings) {
             javaScriptEnabled = true
             domStorageEnabled = true
             cacheMode = WebSettings.LOAD_NO_CACHE
-
+            userAgentString += " MobileSDK " + pInfo.versionName + " " + pInfo.applicationInfo.packageName
             allowFileAccessFromFileURLs = true
             allowFileAccess = true
             allowContentAccess = true
