@@ -36,7 +36,8 @@ Create a Chat.Configuration object with your parameters. The constructor support
 Kotlin:
 ```
 val provider = "SnapEngage"
-val jsUrl = "https://yourdomain.com/yourjslocation.js"
+// jsUrl from your SnapEngage code snippet
+val jsUrl = "https://storage.googleapis.com/code.snapengage.com/js/your-widget-id.js"
 val entryPageUrl = "https://yourdomain.com/"
 val customVariables = CustomVariables()
 	.put("accountNumber", 123456)
@@ -47,8 +48,9 @@ provider, jsUrl, entryPageUrl, customVariables)
 
 Java:
 ```
-String provider = "SnapEngage”;
-String jsUrl = "https://yourdomain.com/yourjslocation.js";
+String provider = "SnapEngage";
+// jsUrl from your SnapEngage code snippet
+String jsUrl = "https://storage.googleapis.com/code.snapengage.com/js/your-widget-id.js";
 String entryPageUrl = "https://yourdomain.com/";
 CustomVariables customVariables = CustomVariables()
 	.put("accountNumber", 123456)
